@@ -36,10 +36,8 @@ export default function PackageFinder() {
   const [query, setQuery] = useState<string>('')
   const [results, setResults] = useState<Package[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
-const session = useSession();
   const handleSearch = async () => {
     if (query === "") return;
-    if(session.status === "unauthenticated") 
     setIsLoading(true)
     try {
       const searchResults = await searchPackages(query)

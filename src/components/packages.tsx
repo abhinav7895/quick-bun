@@ -145,10 +145,10 @@ const Packages = ({ packages }: { packages: Package[] }) => {
       </AnimatePresence>
 
       <Dialog open={isDialogOpen} onOpenChange={handleDialogClose}>
-        <DialogContent className="w-full sm:max-w-[625px] h-[90vh] sm:h-auto">
+        <DialogContent className="w-full rounded-lg sm:max-w-[625px] h-auto">
           <DialogHeader>
-            <DialogTitle className="text-lg sm:text-xl">{selectedPackage?.name}</DialogTitle>
-            <DialogDescription className="text-sm sm:text-base">{selectedPackage?.description}</DialogDescription>
+            <DialogTitle className="text-lg text-left sm:text-xl">{selectedPackage?.name}</DialogTitle>
+            <DialogDescription className="text-sm text-left sm:text-base">{selectedPackage?.description}</DialogDescription>
           </DialogHeader>
           <div className="py-4 overflow-y-auto max-h-[calc(90vh-200px)] sm:max-h-[400px]">
             {completion ? (
@@ -167,7 +167,7 @@ const Packages = ({ packages }: { packages: Package[] }) => {
             )}
           </div>
           {(!completion || isLoading) && <DialogFooter>
-            <Button onClick={generateDocumentation} disabled={isLoading} className="w-full sm:w-auto">
+            <Button onClick={generateDocumentation} disabled={isLoading} className="w-full text-neutral-50 sm:w-auto">
               {isLoading ? <LoaderCircle className=' animate-spin' /> : 'Generate Documentation'}
             </Button>
           </DialogFooter>}
