@@ -32,7 +32,7 @@ QuickBun is an AI-powered package suggestion and documentation generator. Users 
    ```
 2. Navigate to the project directory:
    ```bash
-   cd quickbun
+   cd quick-bun
    ```
 3. Install dependencies:
    ```bash
