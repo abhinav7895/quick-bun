@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Discover and explore NPM packages with ease using Package Finder. Get AI-generated documentation and usage examples for any package.",
   keywords: "npm, package finder,quickbun, bun, javascript libraries, AI documentation, developer tools",
   openGraph: {
-    title: "Package Finder | Discover NPM Packages with AI",
+    title: "QuickBun | Discover NPM Packages with AI",
     description: "Find the perfect NPM package for your project with AI-generated documentation and examples.",
     type: "website",
     url: "https://www.quickbun.vercel.app",
