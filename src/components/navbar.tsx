@@ -4,7 +4,7 @@ import React from 'react'
 import { LogOut, MoonStar, PackageIcon, Sun } from 'lucide-react'
 import { Fraunces } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import { signOut, useSession } from "next-auth/react"
+import { signOut } from "next-auth/react"
 import { useTheme } from 'next-themes';
 
 const fraunces = Fraunces({
@@ -19,8 +19,6 @@ const fraunces = Fraunces({
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
-    const session = useSession();
-
     const handleTheme = async () => {
         setTheme(theme === "dark" ? "light" : "dark");
     }
@@ -40,9 +38,9 @@ const Navbar = () => {
                         <button onClick={handleTheme}>
                             {theme === "dark" ? <MoonStar /> : <Sun />}
                         </button>
-                        {session.status === "authenticated" && <button onClick={handleLogout} >
+                        <button onClick={handleLogout} >
                             <LogOut />
-                        </button>}
+                        </button>
                     </div>
                 </div>
             </nav>
