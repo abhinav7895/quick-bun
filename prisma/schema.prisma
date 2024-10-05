@@ -9,13 +9,17 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  credits   Int      @default(50)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  searches  Search[]
+  id                  String   @id @default(cuid())
+  email               String   @unique
+  name                String?
+  credits             Int      @default(50)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  image               String?
+  bonusCreditsClaimed Boolean  @default(false)
+  githubStarred       Boolean  @default(false)
+  twitterConnected    Boolean  @default(false)
+  searches            Search[]
 }
 
 model Package {
@@ -33,10 +37,10 @@ model Search {
   query     String
   createdAt DateTime @default(now())
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
   packageId String
   package   Package  @relation(fields: [packageId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
 
   @@index([userId])
   @@index([packageId])
-} 
+}

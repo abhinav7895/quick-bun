@@ -1,6 +1,7 @@
-import Navbar from "@/components/navbar";
 import PackageFinder from "@/components/package-finder";
-
+import dynamic from 'next/dynamic'
+ 
+const Navbar = dynamic(() => import('@/components/navbar'), { ssr: false })
 
 export default function Home() {
   return (

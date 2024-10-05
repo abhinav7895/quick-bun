@@ -6,6 +6,10 @@ CREATE TABLE "User" (
     "credits" INTEGER NOT NULL DEFAULT 50,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
+    "image" TEXT,
+    "bonusCreditsClaimed" BOOLEAN NOT NULL DEFAULT false,
+    "githubStarred" BOOLEAN NOT NULL DEFAULT false,
+    "twitterConnected" BOOLEAN NOT NULL DEFAULT false,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
@@ -46,7 +50,7 @@ CREATE INDEX "Search_userId_idx" ON "Search"("userId");
 CREATE INDEX "Search_packageId_idx" ON "Search"("packageId");
 
 -- AddForeignKey
-ALTER TABLE "Search" ADD CONSTRAINT "Search_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Search" ADD CONSTRAINT "Search_packageId_fkey" FOREIGN KEY ("packageId") REFERENCES "Package"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Search" ADD CONSTRAINT "Search_packageId_fkey" FOREIGN KEY ("packageId") REFERENCES "Package"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Search" ADD CONSTRAINT "Search_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
