@@ -56,7 +56,7 @@ const session = useSession();
     <div className="mx-auto sm:p-4 max-w-2xl">
       <div className='py-20'>
         <div className='space-y-2'>
-          <h1 className={cn(fraunces.className, 'text-4xl text-center text-neutral-700 dark:text-neutral-200')}>PackPicker</h1>
+          <h1 className={cn(fraunces.className, 'text-4xl text-center text-neutral-700 dark:text-neutral-200')}>QuickBun</h1>
           <p className='text-lg text-center dark:text-neutral-400 text-neutral-500'>
             Find top npm packages and generate docs with AI assistance
           </p>    </div>

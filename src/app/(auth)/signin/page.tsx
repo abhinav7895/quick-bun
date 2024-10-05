@@ -22,7 +22,7 @@ const Signin = () => {
             <div className='flex flex-col relative items-center space-y-2'>
                 <div className=' flex gap-2 flex-col items-center text-neutral-600 dark:text-neutral-300'>
                     <Package className='size-10 sm:size-12 ' />
-                    <h1 className={cn(fraunces.className, ' text-3xl sm:text-4xl text-center ')}>PackPicker</h1>
+                    <h1 className={cn(fraunces.className, ' text-3xl sm:text-4xl text-center ')}>QuickBun</h1>
                     <p className='text-center text-sm sm:text-base text-neutral-500 dark:text-neutral-400'> Smart npm package recommendations with one-click docs
                     </p>
                 </div>
@@ -33,7 +33,7 @@ const Signin = () => {
                 </form>
                 <footer className='text-neutral-400 pt-2 fixed bottom-6 justify-center w-full text-sm'>
                     <div className='w-fit mx-auto'>
-                        @2024 - PackPicker
+                        @2024 - QuickBun
                     </div>
                 </footer>
             </div>

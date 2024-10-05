@@ -5,20 +5,20 @@ import { SessionProvider } from "next-auth/react";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "Package Finder | AI-Powered NPM Package Discovery",
+  title: "QuickBun | AI-Powered NPM Package Discovery",
   description: "Discover and explore NPM packages with ease using Package Finder. Get AI-generated documentation and usage examples for any package.",
-  keywords: "npm, package finder, javascript libraries, AI documentation, developer tools",
+  keywords: "npm, package finder,quickbun, bun, javascript libraries, AI documentation, developer tools",
   openGraph: {
     title: "Package Finder | Discover NPM Packages with AI",
     description: "Find the perfect NPM package for your project with AI-generated documentation and examples.",
     type: "website",
-    url: "https://www.packagefinder.vercel.app",
+    url: "https://www.quickbun.vercel.app",
     images: [
       {
         url: "/favicon.ico",
         width: 100,
         height: 100,
-        alt: "Package Finder - AI-Powered NPM Package Discovery",
+        alt: "QuickBun - AI-Powered NPM Package Discovery",
       },
     ],
   },
