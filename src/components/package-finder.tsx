@@ -11,7 +11,6 @@ import { toast } from 'sonner'
 import { Shimmer } from './shimmer'
 import { Package } from '@/types/types'
 import Packages from './packages'
-import { useSession } from 'next-auth/react'
 
 const fraunces = Fraunces({
   weight: [

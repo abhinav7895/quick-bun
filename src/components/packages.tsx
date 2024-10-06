@@ -28,7 +28,7 @@ const Packages = ({ packages }: { packages: Package[] }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
 
-  const { complete, completion, isLoading, setCompletion } = useCompletion({
+  const { complete, completion, isLoading, stop,  setCompletion } = useCompletion({
     api: '/api/generate-documentation',
   })
 
@@ -50,10 +50,11 @@ const Packages = ({ packages }: { packages: Package[] }) => {
     await complete(selectedPackage.name)
   }
 
-  const handleDialogClose = useCallback(() => {
-    setIsDialogOpen(false)
-    setCompletion('')
-  }, [setCompletion])
+  const handleDialogClose = () => {
+    setIsDialogOpen(false);
+    setCompletion('');
+    stop()
+  }
 
   const CodeBlock = ({ inline, className, children }: any) => {
     const match = /language-(\w+)/.exec(className || '')
